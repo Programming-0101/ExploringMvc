@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Understanding MVC";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h4>Part 1: URLs</h4>
+
+<p>Page navigation works by creating links to differnt "pages" or parts of your application. These links are essentially <dfn title="Uniform Resource Locators">URLs</dfn> that, when clicked, send a page request from your browser to a web server.</p>
+
+<p>The job of the web server is to interpret the request (URL) and respond with the appropriate "page". In an MVC application, the page request is <em>mapped</em> to a specific
+    <q cite="from https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjylI6-sonXAhVJ12MKHT-uCX4QFggoMAE&url=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fdd410269(v%3Dvs.98).aspx&usg=AOvVaw1b6ULK46ZBPBio1qE-0VU6">
+        <dfn title="A controller class typically calls a separate view component to generate the HTML markup for the request.">Controller</dfn>
+    </q>
+    class through something called a <strong><dfn>Routing Table</dfn></strong>.</p>
+
+
+<style>
+    .body-content {
+        columns: 2;
+        column-rule: outset 4px lightgray;
+    }
+
+        .body-content > * {
+            padding-left: calc(.5em + 5px);
+        }
+
+        .body-content > h2:first-child, .body-content > h3:nth-child(2) {
+            column-span: all;
+            border-left: inset 3px lightgray;
+            margin: 0;
+            padding-left: .5em;
+            padding-top: .3em;
+        }
+
+        .body-content > h3:nth-child(2) {
+            border-bottom: inset 3px lightgray;
+            padding-bottom: .2em;
+            font-style: italic;
+        }
+
+        .body-content > footer, .body-content > hr {
+            column-span: all;
+        }
+
+    dfn {
+        display: inline-block;
+        position: relative;
+        padding-left: 7px;
+        border-bottom: dashed thin lightgray;
+    }
+        dfn:before {
+            content: '?';
+            border: dashed thin lightgray;
+            font-size: .5em;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+</style>
